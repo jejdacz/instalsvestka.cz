@@ -1,0 +1,20 @@
+{
+    "name": "instalsvestka.cz",
+    "short_name": "instalsvestka.cz",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=gAdLMe6P0o",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=gAdLMe6P0o",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00afbe",
+    "background_color": "#00afbe",
+    "start_url": "https://instalsvestka.cz",
+    "display": "standalone"
+}
