@@ -1,9 +1,172 @@
 @import "normalize.css";
 
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat-Bold"),
+    url("./fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat-Light"),
+    url("./fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary-color: #f5f5f5;
+$secondary-color: #00afbe;
+$inverse-color: rgb(22, 32, 32);
+$text-light: #fafafa;
+$text-dark: #555;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $text-dark;
+  } @else {
+    @return $text-light;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
+  color: set-text-color($primary-color);
+  background: $primary-color;
+}
+
+ul {
+  list-style-type: square;
+}
+
+p,
+ul {
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+header {
+  padding: 0.75rem;
+  text-align: center;
+  //background-image: url("./images/bg.jpg"),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(./images/bg.jpg);
+  background-size: cover;
+}
+
+.section-padding {
+  padding: 6rem 3rem;
+}
+
+footer {
+  color: set-text-color($inverse-color);
+  background-color: $inverse-color;
+}
+
+.center {
+  text-align: center;
+}
+
+.header-top-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.main-heading-wrapper {
+  padding-top: 13rem;
+  padding-bottom: 8rem;
+}
+
+.main-heading {
+  display: inline-block;
+  padding: 0 2.5rem;
+  font-size: 4rem;
+  line-height: 0.8;
+  color: $secondary-color;
+  border-bottom: solid 1px set-text-color($primary-color);
+  margin-bottom: 0.75rem;
+
+  & span.font-light {
+    font-style: inherit;
+    font-weight: normal;
+    color: set-text-color($primary-color);
+  }
+}
+
+.main-heading-desc {
+  font-size: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.main-heading-phone {
+  color: $secondary-color;
+  font-weight: bold;
+}
+
+.btn {
+  color: set-text-color($secondary-color);
+  background: $secondary-color;
+  display: inline-block;
+  border-radius: 0.3rem;
+  padding: 1.2rem 2.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid $secondary-color;
+  margin-bottom: 0.75rem;
+
+  &:hover {
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 1.5rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.copy-wrapper {
+  border: 1px solid lighten($inverse-color, 10);
+  padding-top: 1.5rem;
 }

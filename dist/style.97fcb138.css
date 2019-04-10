@@ -347,10 +347,148 @@ template {
 [hidden] {
   display: none;
 }
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat-Bold"), url("Montserrat-Bold.f3410305.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat-Light"), url("Montserrat-Light.fbb571cf.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
+  color: #555;
+  background: #f5f5f5;
+}
+
+ul {
+  list-style-type: square;
+}
+
+p,
+ul {
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+header {
+  padding: 0.75rem;
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(bg.43bfd8b0.jpg);
+  background-size: cover;
+}
+
+.section-padding {
+  padding: 6rem 3rem;
+}
+
+footer {
+  color: #fafafa;
+  background-color: #162020;
+}
+
+.center {
+  text-align: center;
+}
+
+.header-top-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.main-heading-wrapper {
+  padding-top: 13rem;
+  padding-bottom: 8rem;
+}
+
+.main-heading {
+  display: inline-block;
+  padding: 0 2.5rem;
+  font-size: 4rem;
+  line-height: 0.8;
+  color: #00afbe;
+  border-bottom: solid 1px #555;
+  margin-bottom: 0.75rem;
+}
+.main-heading span.font-light {
+  font-style: inherit;
+  font-weight: normal;
+  color: #555;
+}
+
+.main-heading-desc {
+  font-size: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.main-heading-phone {
+  color: #00afbe;
+  font-weight: bold;
+}
+
+.btn {
+  color: #fafafa;
+  background: #00afbe;
+  display: inline-block;
+  border-radius: 0.3rem;
+  padding: 1.2rem 2.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid #00afbe;
+  margin-bottom: 0.75rem;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #00afbe;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 1.5rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.copy-wrapper {
+  border: 1px solid #2b3e3e;
+  padding-top: 1.5rem;
 }

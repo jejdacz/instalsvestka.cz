@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jejdacz/instalsvestka.cz#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
     "gulp-real-favicon": "^0.3.2",
     "sass": "^1.18.0"
