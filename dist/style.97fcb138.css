@@ -389,6 +389,13 @@ h6 {
   margin: 0;
 }
 
+hr {
+  height: 0px;
+  opacity: 0.2;
+  margin: 0;
+  border-top: 1px solid #555;
+}
+
 .text-secondary {
   color: #00afbe;
 }
@@ -397,6 +404,7 @@ h6 {
 .heading-secondary {
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.05rem;
 }
 
 .heading-primary {
@@ -404,6 +412,7 @@ h6 {
 }
 
 .header {
+  position: relative;
   padding: 0.75rem;
   text-align: center;
   background-image: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9)), url(bg.43bfd8b0.jpg);
@@ -439,19 +448,47 @@ h6 {
 .header .heading-secondary {
   font-size: 1.25rem;
   margin-bottom: 3.5rem;
+  font-weight: normal;
+  letter-spacing: 0.25rem;
 }
 .header .phone-number {
   color: #00afbe;
   font-weight: bold;
 }
+.header .credit {
+  display: block;
+  text-align: left;
+  transform: rotate(90deg) translateX(-100%);
+  transform-origin: 0% 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
+.section {
+  padding: 8.5rem 3rem;
+}
 .section .heading-primary {
   font-size: 2.5rem;
 }
 .section .heading-secondary {
   font-size: 1.25rem;
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
   font-weight: normal;
+}
+.section .icon {
+  width: 6rem;
+  margin: 3.5rem auto;
+  display: block;
+  fill: #555;
+}
+.section .icon .secondary {
+  fill: #00afbe;
+}
+.section .cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 1.5rem;
 }
 .section .card .heading-primary {
   font-size: 1.75rem;
@@ -459,36 +496,95 @@ h6 {
 }
 .section .card .heading-secondary {
   font-size: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 .section .card .list {
   padding-inline-start: 2rem;
   margin: 0;
 }
-.section .card .icon {
-  width: 6rem;
+
+#about {
+  background-color: #ededed;
+}
+
+.about-wrapper {
+  max-width: 50rem;
   margin: 0 auto;
-  margin-bottom: 2.5rem;
-  display: block;
+  display: grid;
+  grid-template-areas: "icon heading-primary" "icon heading-secondary" "icon text";
 }
-.section .card .icon .primary {
-  fill: #555;
+.about-wrapper .heading-primary {
+  grid-area: heading-primary;
+  text-align: left;
 }
-.section .card .icon .secondary {
-  fill: #00afbe;
+.about-wrapper .heading-secondary {
+  grid-area: heading-secondary;
+  text-align: left;
+  margin: 0;
+}
+.about-wrapper .icon {
+  grid-area: icon;
+  margin: 0;
+  align-self: center;
+  margin-right: 3.5rem;
+  width: 8rem;
+}
+.about-wrapper .text {
+  grid-area: text;
 }
 
-.section-padding {
-  padding: 7.5rem 3rem;
-}
-
-footer {
+.footer {
   color: #fafafa;
   background-color: #162020;
 }
 
-.text-center {
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts-wrapper .heading-wrapper {
+  margin-right: 3rem;
+}
+.contacts-wrapper .heading-primary {
+  text-align: left;
+}
+.contacts-wrapper .heading-secondary {
+  text-align: left;
+  margin-bottom: 0;
+}
+.contacts-wrapper .list {
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-style: normal;
+  border-left: 1px solid #fafafa;
+}
+.contacts-wrapper .list li {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.contacts-wrapper .list a {
+  text-decoration: none;
+  color: #fafafa;
+}
+.contacts-wrapper .icon {
+  display: inline;
+  margin: 0;
+  fill: #fafafa;
+  height: 1.5rem;
+}
+
+.copy-wrapper {
   text-align: center;
+  background-color: #121a1a;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.copy-wrapper a {
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: bold;
 }
 
 .btn {
@@ -509,18 +605,7 @@ footer {
   color: #00afbe;
 }
 
-.res-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-gap: 1.5rem;
-}
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.copy-wrapper {
-  border: 1px solid #2b3e3e;
-  padding-top: 1.5rem;
 }
