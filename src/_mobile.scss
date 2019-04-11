@@ -1,0 +1,114 @@
+@include mediaLg {
+  .services-heading {
+    .heading-secondary {
+      margin-bottom: 2rem;
+    }
+  }
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+    margin: 0 auto;
+
+    .card {
+      padding: $spacing-lg 0;
+    }
+
+    .card + .card {
+      border-top: 1px solid rgba(set-text-color($primary-color), 0.2);
+    }
+  }
+  .about-wrapper {
+    max-width: 30rem;
+    grid-template-areas:
+      "heading-primary"
+      "heading-secondary"
+      "icon"
+      "text";
+
+    .heading-primary,
+    .heading-secondary {
+      text-align: center;
+    }
+
+    .icon {
+      margin: $spacing-lg auto;
+    }
+  }
+  .contacts-wrapper {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    .heading-wrapper {
+      margin: 0;
+      margin-bottom: $spacing-lg;
+    }
+
+    .heading-primary,
+    .heading-secondary {
+      text-align: center;
+    }
+
+    .list {
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+@include mediaMd {
+  .header {
+    .heading-primary {
+      font-size: 2.5rem;
+    }
+    .heading-secondary {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mediaSm {
+  .header {
+    .heading-wrapper {
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+    }
+    .heading-primary {
+      font-size: 2.2rem;
+      padding: 0 0.2rem;
+    }
+    .heading-secondary {
+      font-size: 0.75rem;
+    }
+    .top-list {
+      font-size: 0.75rem;
+    }
+  }
+  .section {
+    padding: 5rem $spacing-sm;
+    .heading-primary {
+      font-size: 1.75rem;
+    }
+    .heading-secondary {
+      font-size: 1rem;
+    }
+  }
+  .cards-wrapper {
+    .card {
+      .heading-primary {
+        font-size: 1.5rem;
+      }
+      .heading-secondary {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .contacts-wrapper {
+    .list {
+      font-size: 1rem;
+    }
+    .icon {
+      height: 1rem;
+    }
+  }
+}

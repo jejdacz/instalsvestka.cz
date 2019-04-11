@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "_config.scss";
 
 @font-face {
   font-family: "Montserrat";
@@ -23,6 +24,8 @@ $secondary-color: #00afbe;
 $inverse-color: rgb(22, 32, 32);
 $text-light: #fafafa;
 $text-dark: #555;
+$spacing-lg: 3.5rem;
+$spacing-sm: 1.5rem;
 
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
@@ -40,6 +43,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: set-text-color($primary-color);
   background: $primary-color;
+  overflow-x: hidden;
 }
 
 ul {
@@ -151,34 +155,54 @@ hr {
 
 // SECTION
 .section {
-  padding: 8.5rem 3rem;
+  padding: 8.5rem $spacing-lg;
 
   .heading-primary {
     font-size: 2.5rem;
   }
   .heading-secondary {
     font-size: 1.25rem;
-    margin-bottom: 7rem;
     font-weight: normal;
   }
 
   .icon {
     width: 6rem;
-    margin: 3.5rem auto;
+    margin: $spacing-lg auto;
     display: block;
     fill: set-text-color($primary-color);
+
+    &.blue,
+    .blue {
+      fill: #00afbe;
+    }
+
+    &.yellow,
+    .yellow {
+      fill: #beab00;
+    }
+
+    &.orange,
+    .orange {
+      fill: #be3c00;
+    }
 
     .secondary {
       fill: $secondary-color;
     }
   }
+}
 
-  // CARDS WRAPPER
-  .cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    grid-gap: 1.5rem;
+.services-heading {
+  .heading-secondary {
+    margin-bottom: 7rem;
   }
+}
+
+// CARDS WRAPPER
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 1.5rem;
 
   // CARD
   .card {
@@ -223,7 +247,7 @@ hr {
     grid-area: icon;
     margin: 0;
     align-self: center;
-    margin-right: 3.5rem;
+    margin-right: $spacing-lg;
     width: 8rem;
   }
   .text {
@@ -242,7 +266,7 @@ hr {
   align-items: center;
 
   .heading-wrapper {
-    margin-right: 3rem;
+    margin-right: $spacing-lg;
   }
 
   .heading-primary {
@@ -253,35 +277,34 @@ hr {
     margin-bottom: 0;
   }
   .list {
-    list-style-type: none;
+    padding-left: 7rem;
     font-size: 1.2rem;
     font-style: normal;
     border-left: 1px solid set-text-color($inverse-color);
-
-    li {
-      display: flex;
-      align-items: center;
-      padding: 1.5rem 0;
-    }
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    row-gap: 1rem;
 
     a {
       text-decoration: none;
       color: set-text-color($inverse-color);
     }
-  }
-  .icon {
-    display: inline;
-    margin: 0;
-    fill: set-text-color($inverse-color);
-    height: 1.5rem;
+
+    .icon {
+      display: block;
+      margin: 0;
+      margin-right: $spacing-sm;
+      fill: set-text-color($inverse-color);
+      width: 1.5rem;
+    }
   }
 }
 
 .copy-wrapper {
   text-align: center;
   background-color: darken($inverse-color, 2);
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  padding: $spacing-sm $spacing-sm 1rem $spacing-sm;
   a {
     text-decoration: none;
     color: set-text-color($inverse-color);
@@ -312,3 +335,5 @@ hr {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+@import "_mobile.scss";

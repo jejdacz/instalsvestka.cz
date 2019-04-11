@@ -369,6 +369,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #555;
   background: #f5f5f5;
+  overflow-x: hidden;
 }
 
 ul {
@@ -466,14 +467,13 @@ hr {
 }
 
 .section {
-  padding: 8.5rem 3rem;
+  padding: 8.5rem 3.5rem;
 }
 .section .heading-primary {
   font-size: 2.5rem;
 }
 .section .heading-secondary {
   font-size: 1.25rem;
-  margin-bottom: 7rem;
   font-weight: normal;
 }
 .section .icon {
@@ -482,23 +482,40 @@ hr {
   display: block;
   fill: #555;
 }
+.section .icon.blue,
+.section .icon .blue {
+  fill: #00afbe;
+}
+.section .icon.yellow,
+.section .icon .yellow {
+  fill: #beab00;
+}
+.section .icon.orange,
+.section .icon .orange {
+  fill: #be3c00;
+}
 .section .icon .secondary {
   fill: #00afbe;
 }
-.section .cards-wrapper {
+
+.services-heading .heading-secondary {
+  margin-bottom: 7rem;
+}
+
+.cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   grid-gap: 1.5rem;
 }
-.section .card .heading-primary {
+.cards-wrapper .card .heading-primary {
   font-size: 1.75rem;
   text-transform: none;
 }
-.section .card .heading-secondary {
+.cards-wrapper .card .heading-secondary {
   font-size: 1rem;
   margin-bottom: 0;
 }
-.section .card .list {
+.cards-wrapper .card .list {
   padding-inline-start: 2rem;
   margin: 0;
 }
@@ -544,7 +561,7 @@ hr {
   align-items: center;
 }
 .contacts-wrapper .heading-wrapper {
-  margin-right: 3rem;
+  margin-right: 3.5rem;
 }
 .contacts-wrapper .heading-primary {
   text-align: left;
@@ -554,32 +571,31 @@ hr {
   margin-bottom: 0;
 }
 .contacts-wrapper .list {
-  list-style-type: none;
+  padding-left: 7rem;
   font-size: 1.2rem;
   font-style: normal;
   border-left: 1px solid #fafafa;
-}
-.contacts-wrapper .list li {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 1.5rem 0;
+  row-gap: 1rem;
 }
 .contacts-wrapper .list a {
   text-decoration: none;
   color: #fafafa;
 }
-.contacts-wrapper .icon {
-  display: inline;
+.contacts-wrapper .list .icon {
+  display: block;
   margin: 0;
+  margin-right: 1.5rem;
   fill: #fafafa;
-  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .copy-wrapper {
   text-align: center;
   background-color: #121a1a;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 .copy-wrapper a {
   text-decoration: none;
@@ -608,4 +624,100 @@ hr {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .services-heading .heading-secondary {
+    margin-bottom: 2rem;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .cards-wrapper .card {
+    padding: 3.5rem 0;
+  }
+  .cards-wrapper .card + .card {
+    border-top: 1px solid rgba(85, 85, 85, 0.2);
+  }
+
+  .about-wrapper {
+    max-width: 30rem;
+    grid-template-areas: "heading-primary" "heading-secondary" "icon" "text";
+  }
+  .about-wrapper .heading-primary,
+.about-wrapper .heading-secondary {
+    text-align: center;
+  }
+  .about-wrapper .icon {
+    margin: 3.5rem auto;
+  }
+
+  .contacts-wrapper {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts-wrapper .heading-wrapper {
+    margin: 0;
+    margin-bottom: 3.5rem;
+  }
+  .contacts-wrapper .heading-primary,
+.contacts-wrapper .heading-secondary {
+    text-align: center;
+  }
+  .contacts-wrapper .list {
+    padding: 0;
+    border: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header .heading-primary {
+    font-size: 2.5rem;
+  }
+  .header .heading-secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .header .heading-wrapper {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+  .header .heading-primary {
+    font-size: 2.2rem;
+    padding: 0 0.2rem;
+  }
+  .header .heading-secondary {
+    font-size: 0.75rem;
+  }
+  .header .top-list {
+    font-size: 0.75rem;
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+  .section .heading-primary {
+    font-size: 1.75rem;
+  }
+  .section .heading-secondary {
+    font-size: 1rem;
+  }
+
+  .cards-wrapper .card .heading-primary {
+    font-size: 1.5rem;
+  }
+  .cards-wrapper .card .heading-secondary {
+    font-size: 1rem;
+  }
+
+  .contacts-wrapper .list {
+    font-size: 1rem;
+  }
+  .contacts-wrapper .icon {
+    height: 1rem;
+  }
 }

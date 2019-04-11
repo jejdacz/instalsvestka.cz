@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./style.scss" />
     <title>Instalatér - Milan Švestka - Brno</title>
   </head>
+
   <body>
     <script>
       (function(i, s, o, g, r, a, m) {
@@ -101,16 +102,18 @@
       <!-- SERVICES -->
       <section id="services">
         <div class="container section">
-          <h2 class="heading-primary">Instalatérské práce</h2>
-          <h4 class="heading-secondary">
-            instalatér pro Brno a okolí
-          </h4>
+          <div class="services-heading">
+            <h2 class="heading-primary">Instalatérské práce</h2>
+            <h4 class="heading-secondary">
+              instalatér pro Brno a okolí
+            </h4>
+          </div>
           <div class="cards-wrapper">
             <div class="card">
               <h3 class="heading-primary">VODA a ODPADY</h3>
               <h4 class="heading-secondary">Lorem ipsum dolor</h4>
               <svg
-                class="icon"
+                class="icon blue"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +149,6 @@
                 <g>
                   <g>
                     <path
-                      class="secondary"
                       d="M438.24,331.001c-2.992-3.446-8.212-3.814-11.658-0.822c-0.293,0.254-0.568,0.529-0.822,0.822
 			c-4.272,5.328-41.76,52.8-41.76,77c0,26.51,21.49,48,48,48c26.51,0,48-21.49,48-48C480,383.801,442.512,336.329,438.24,331.001z
 			 M432,440.001c-17.673,0-32-14.327-32-32c0-12.168,17.664-39.776,32-58.92c14.336,19.144,32,46.752,32,58.92
@@ -188,7 +190,7 @@
               <h3 class="heading-primary">PLYN</h3>
               <h4 class="heading-secondary">Lorem ipsum dolor</h4>
               <svg
-                class="icon"
+                class="icon yellow"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +246,7 @@
               <h3 class="heading-primary">TOPENÍ</h3>
               <h4 class="heading-secondary">Lorem ipsum dolor</h4>
               <svg
-                class="icon"
+                class="icon orange"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -383,10 +385,20 @@
               <g></g>
               <g></g>
             </svg>
-            <p class="text">
-                Vítejte na stránkách www.instalsvestka.cz Jmenuji se Milan Švestka a provádím kompletní instalatérské, topenářské a plynařské práce. Mám dlouholetou praxi v oboru, nabízím kvalitní práci a spolehlivost, to vše za rozumnou cenu.
-                Veškeré instalatérské, topenářské a plynařské práce vykonávám pro oblast Brno, Brno- venkov a po domluvě i ve vzdálenějších lokalitách. Jsem schopen domluvit řemeslníky i z jiného oboru jako jsou: zedník-obkladač, elektrikář, truhlář a jiné.
-            </p>
+            <div class="text">
+              <p>
+                Jmenuji se Milan Švestka a provádím kompletní instalatérské,
+                topenářské a plynařské práce. Mám dlouholetou praxi v oboru,
+                nabízím kvalitní práci a spolehlivost, to vše za rozumnou cenu.
+                Veškeré instalatérské, topenářské a plynařské práce vykonávám
+                pro oblast Brno, Brno- venkov a po domluvě i ve vzdálenějších
+                lokalitách.
+              </p>
+              <p>
+                Jsem schopen domluvit řemeslníky i z jiného oboru jako jsou:
+                zedník-obkladač, elektrikář, truhlář a jiné.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -401,25 +413,23 @@
             <h2 class="heading-primary">Kontakt</h2>
             <h4 class="heading-secondary">Lorem Ipsum Dolor</h4>
           </div>
-          <address>
-            <ul class="list">
-              <li>
-                <svg
-                  class="icon"
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 473.806 473.806"
-                  style="enable-background:new 0 0 473.806 473.806;"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4
+          <address class="list">
+            <svg
+              class="icon"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 473.806 473.806"
+              style="enable-background:new 0 0 473.806 473.806;"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4
                      c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8
                      c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6
                      c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5
@@ -435,129 +445,129 @@
                      c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9
                      l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1
                      C420.456,377.706,420.456,388.206,410.256,398.806z"
-                      />
-                      <path
-                        d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2
+                  />
+                  <path
+                    d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2
                      c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11
                      S248.656,111.506,256.056,112.706z"
-                      />
-                      <path
-                        d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11
+                  />
+                  <path
+                    d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11
                      c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2
                      c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z"
-                      />
-                    </g>
-                  </g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                </svg>
-                <a href="tel:+420-776-654-744">+420-776-654-744</a>
-              </li>
-              <li>
-                <svg
-                  class="icon"
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 483.3 483.3"
-                  style="enable-background:new 0 0 483.3 483.3;"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M424.3,57.75H59.1c-32.6,0-59.1,26.5-59.1,59.1v249.6c0,32.6,26.5,59.1,59.1,59.1h365.1c32.6,0,59.1-26.5,59.1-59.1
+                  />
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            <a href="tel:+420-776-654-744">+420-776-654-744</a>
+
+            <svg
+              class="icon"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 483.3 483.3"
+              style="enable-background:new 0 0 483.3 483.3;"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M424.3,57.75H59.1c-32.6,0-59.1,26.5-59.1,59.1v249.6c0,32.6,26.5,59.1,59.1,59.1h365.1c32.6,0,59.1-26.5,59.1-59.1
                      v-249.5C483.4,84.35,456.9,57.75,424.3,57.75z M456.4,366.45c0,17.7-14.4,32.1-32.1,32.1H59.1c-17.7,0-32.1-14.4-32.1-32.1v-249.5
                      c0-17.7,14.4-32.1,32.1-32.1h365.1c17.7,0,32.1,14.4,32.1,32.1v249.5H456.4z"
-                      />
-                      <path
-                        d="M304.8,238.55l118.2-106c5.5-5,6-13.5,1-19.1c-5-5.5-13.5-6-19.1-1l-163,146.3l-31.8-28.4c-0.1-0.1-0.2-0.2-0.2-0.3
+                  />
+                  <path
+                    d="M304.8,238.55l118.2-106c5.5-5,6-13.5,1-19.1c-5-5.5-13.5-6-19.1-1l-163,146.3l-31.8-28.4c-0.1-0.1-0.2-0.2-0.2-0.3
                      c-0.7-0.7-1.4-1.3-2.2-1.9L78.3,112.35c-5.6-5-14.1-4.5-19.1,1.1c-5,5.6-4.5,14.1,1.1,19.1l119.6,106.9L60.8,350.95
                      c-5.4,5.1-5.7,13.6-0.6,19.1c2.7,2.8,6.3,4.3,9.9,4.3c3.3,0,6.6-1.2,9.2-3.6l120.9-113.1l32.8,29.3c2.6,2.3,5.8,3.4,9,3.4
                      c3.2,0,6.5-1.2,9-3.5l33.7-30.2l120.2,114.2c2.6,2.5,6,3.7,9.3,3.7c3.6,0,7.1-1.4,9.8-4.2c5.1-5.4,4.9-14-0.5-19.1L304.8,238.55z"
-                      />
-                    </g>
-                  </g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                </svg>
-                <a
-                  href="mailto:milan.svestka@seznam.cz?Subject=Instalatérské%20práce"
-                  >milan.svestka@seznam.cz</a
-                >
-              </li>
-              <li>
-                <svg
-                  class="icon"
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 486.196 486.196"
-                  style="enable-background:new 0 0 486.196 486.196;"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <path
-                      d="M481.708,220.456l-228.8-204.6c-0.4-0.4-0.8-0.7-1.3-1c-5-4.8-13-5-18.3-0.3l-228.8,204.6c-5.6,5-6,13.5-1.1,19.1
+                  />
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            <a
+              href="mailto:milan.svestka@seznam.cz?Subject=Instalatérské%20práce"
+              >milan.svestka@seznam.cz</a
+            >
+
+            <svg
+              class="icon"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 486.196 486.196"
+              style="enable-background:new 0 0 486.196 486.196;"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M481.708,220.456l-228.8-204.6c-0.4-0.4-0.8-0.7-1.3-1c-5-4.8-13-5-18.3-0.3l-228.8,204.6c-5.6,5-6,13.5-1.1,19.1
                    c2.7,3,6.4,4.5,10.1,4.5c3.2,0,6.4-1.1,9-3.4l41.2-36.9v7.2v106.8v124.6c0,18.7,15.2,34,34,34c0.3,0,0.5,0,0.8,0s0.5,0,0.8,0h70.6
                    c17.6,0,31.9-14.3,31.9-31.9v-121.3c0-2.7,2.2-4.9,4.9-4.9h72.9c2.7,0,4.9,2.2,4.9,4.9v121.3c0,17.6,14.3,31.9,31.9,31.9h72.2
                    c19,0,34-18.7,34-42.6v-111.2v-34v-83.5l41.2,36.9c2.6,2.3,5.8,3.4,9,3.4c3.7,0,7.4-1.5,10.1-4.5
                    C487.708,233.956,487.208,225.456,481.708,220.456z M395.508,287.156v34v111.1c0,9.7-4.8,15.6-7,15.6h-72.2c-2.7,0-4.9-2.2-4.9-4.9
                    v-121.1c0-17.6-14.3-31.9-31.9-31.9h-72.9c-17.6,0-31.9,14.3-31.9,31.9v121.3c0,2.7-2.2,4.9-4.9,4.9h-70.6c-0.3,0-0.5,0-0.8,0
                    s-0.5,0-0.8,0c-3.8,0-7-3.1-7-7v-124.7v-106.8v-31.3l151.8-135.6l153.1,136.9L395.508,287.156L395.508,287.156z"
-                    />
-                  </g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                  <g></g>
-                </svg>
-                <span><a href="https://www.google.cz/maps/place/Nov%C3%A1+ulice+691%2F44,+664+47+St%C5%99elice/@49.15465,16.4976002,17z/data=!3m1!4b1!4m5!3m4!1s0x4712bd8c812c20ff:0x2669f367f6a917ba!8m2!3d49.1546465!4d16.4997889" target="_blank">Milan Švestka, Nová 44, Střelice 664 47</a>
-              </li>
-            </ul>
+                />
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            <a
+              href="https://www.google.cz/maps/place/Nov%C3%A1+ulice+691%2F44,+664+47+St%C5%99elice/@49.15465,16.4976002,17z/data=!3m1!4b1!4m5!3m4!1s0x4712bd8c812c20ff:0x2669f367f6a917ba!8m2!3d49.1546465!4d16.4997889"
+              target="_blank"
+              >Milan Švestka, Nová 44, Střelice 664 47</a
+            >
           </address>
         </div>
       </div>
