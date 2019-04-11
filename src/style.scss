@@ -54,37 +54,122 @@ ul {
 h1,
 h2,
 h3,
-h4 {
-  text-transform: uppercase;
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-h2 {
-  font-size: 2.5rem;
+.text-secondary {
+  color: $secondary-color;
 }
 
-h3 {
-  font-size: 2rem;
+.heading-primary,
+.heading-secondary {
+  text-transform: uppercase;
+  text-align: center;
 }
 
-h4 {
-  font-weight: normal;
+.heading-primary {
+  letter-spacing: 0.15rem;
 }
 
-header {
+// HEADER
+.header {
   padding: 0.75rem;
   text-align: center;
   //background-image: url("./images/bg.jpg"),
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
+      rgba(240, 240, 240, 0.9),
+      rgba(240, 240, 240, 0.9)
     ),
     url(./images/bg.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  .top-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.25rem;
+  }
+
+  .heading-wrapper {
+    padding-top: 13rem;
+    padding-bottom: 8rem;
+  }
+
+  .heading-primary {
+    display: inline-block;
+    padding: 0 2.5rem;
+    font-size: 4rem;
+    line-height: 0.8;
+    border-bottom: solid 1px set-text-color($primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: normal;
+
+    .text-secondary {
+      font-weight: bold;
+    }
+  }
+
+  .heading-secondary {
+    font-size: 1.25rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .phone-number {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}
+
+// SECTION
+.section {
+  .heading-primary {
+    font-size: 2.5rem;
+  }
+  .heading-secondary {
+    font-size: 1.25rem;
+    margin-bottom: 6rem;
+    font-weight: normal;
+  }
+
+  // CARD
+  .card {
+    .heading-primary {
+      font-size: 1.75rem;
+      text-transform: none;
+    }
+    .heading-secondary {
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .list {
+      padding-inline-start: 2rem;
+      margin: 0;
+    }
+    .icon {
+      width: 6rem;
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+      display: block;
+      .primary {
+        fill: set-text-color($primary-color);
+      }
+      .secondary {
+        fill: $secondary-color;
+      }
+    }
+  }
 }
 
 .section-padding {
-  padding: 6rem 3rem;
+  padding: 7.5rem 3rem;
 }
 
 footer {
@@ -92,48 +177,8 @@ footer {
   background-color: $inverse-color;
 }
 
-.center {
+.text-center {
   text-align: center;
-}
-
-.header-top-list {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-.main-heading-wrapper {
-  padding-top: 13rem;
-  padding-bottom: 8rem;
-}
-
-.main-heading {
-  display: inline-block;
-  padding: 0 2.5rem;
-  font-size: 4rem;
-  line-height: 0.8;
-  color: $secondary-color;
-  border-bottom: solid 1px set-text-color($primary-color);
-  margin-bottom: 0.75rem;
-
-  & span.font-light {
-    font-style: inherit;
-    font-weight: normal;
-    color: set-text-color($primary-color);
-  }
-}
-
-.main-heading-desc {
-  font-size: 1.2rem;
-  margin-bottom: 3.5rem;
-}
-
-.main-heading-phone {
-  color: $secondary-color;
-  font-weight: bold;
 }
 
 .btn {

@@ -383,33 +383,32 @@ ul {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+  text-transform: uppercase;
   margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-weight: normal;
 }
 
 .text-secondary {
   color: #00afbe;
 }
 
-.heading-primary,
-.heading-secondary {
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.heading-primary {
-  letter-spacing: 0.15rem;
-}
-
 .header {
   padding: 0.75rem;
   text-align: center;
-  background-image: linear-gradient(rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 0.9)), url(bg.43bfd8b0.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(bg.43bfd8b0.jpg);
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
 }
 .header .top-list {
   display: flex;
@@ -418,7 +417,6 @@ h6 {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  letter-spacing: 0.25rem;
 }
 .header .heading-wrapper {
   padding-top: 13rem;
@@ -436,50 +434,17 @@ h6 {
 .header .heading-primary .text-secondary {
   font-weight: bold;
 }
-.header .heading-secondary {
-  font-size: 1.25rem;
+.header .heading-primary .heading-secondary {
+  font-size: 1.2rem;
   margin-bottom: 3.5rem;
 }
-.header .phone-number {
+.header .heading-primary .phone-number {
   color: #00afbe;
   font-weight: bold;
 }
 
-.section .heading-primary {
-  font-size: 2.5rem;
-}
-.section .heading-secondary {
-  font-size: 1.25rem;
-  margin-bottom: 6rem;
-  font-weight: normal;
-}
-.section .card .heading-primary {
-  font-size: 1.75rem;
-  text-transform: none;
-}
-.section .card .heading-secondary {
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-}
-.section .card .list {
-  padding-inline-start: 2rem;
-  margin: 0;
-}
-.section .card .icon {
-  width: 6rem;
-  margin: 0 auto;
-  margin-bottom: 2.5rem;
-  display: block;
-}
-.section .card .icon .primary {
-  fill: #555;
-}
-.section .card .icon .secondary {
-  fill: #00afbe;
-}
-
 .section-padding {
-  padding: 7.5rem 3rem;
+  padding: 6rem 3rem;
 }
 
 footer {
@@ -487,7 +452,7 @@ footer {
   background-color: #162020;
 }
 
-.text-center {
+.center {
   text-align: center;
 }
 
