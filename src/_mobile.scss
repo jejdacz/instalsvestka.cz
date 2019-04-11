@@ -1,9 +1,4 @@
 @include mediaLg {
-  .services-heading {
-    .heading-secondary {
-      margin-bottom: 2rem;
-    }
-  }
   .cards-wrapper {
     grid-template-columns: 1fr;
     max-width: 30rem;
@@ -59,9 +54,10 @@
   .header {
     .heading-primary {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     .heading-secondary {
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
   }
 }
@@ -75,9 +71,10 @@
     .heading-primary {
       font-size: 2.2rem;
       padding: 0 0.2rem;
+      margin-bottom: 0.25rem;
     }
     .heading-secondary {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
     }
     .top-list {
       font-size: 0.75rem;
